@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors'
-import OpenAI from "openai";
 import axios from 'axios'
 const app=express()
 const PORT=1000
@@ -15,7 +14,7 @@ app.post('/request',async(req,res)=>{
  var response=await axios.post("https://chatgpt-42.p.rapidapi.com/conversationgpt4-2",
      {
     messages: [
-      { role: "user", content: req.body.message }
+      { role: "user", content: req.body.message+'-- keep the response breifer than usual, avoid using any anusual sign like *|# etc. Respond in plain text without markdown formatting.' }
     ],
     system_prompt: "",
     temperature: 0.9,
