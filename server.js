@@ -24,7 +24,7 @@ app.post('/request',async(req,res)=>{
     web_access: false
   },{
      headers: {
-      "x-rapidapi-key": "1b6d70030dmshf9306ff20c8f459p1b46fajsn53e25d199006",
+      "x-rapidapi-key": "a19cdfeeb8msh8c508eb8c35c4bep1a4dbajsncf0e2939bd86",
       "x-rapidapi-host": "chatgpt-42.p.rapidapi.com",
       "Content-Type": "application/json"
     }
