@@ -14,9 +14,9 @@ app.post('/request',async(req,res)=>{
  var response=await axios.post("https://chatgpt-42.p.rapidapi.com/conversationgpt4-2",
      {
     messages: [
-      { role: "user", content: req.body.message+'---Prompt ends here. To answer this, dont use any markdowns and answer normally without telling me that you did not or u wont use them, i dont need any spec message other than the topic' }
+      { role: "user", content: req.body.message }
     ],
-    system_prompt: "",
+    system_prompt: "Respond directly to the topic. Do not say phrases like 'I understand'. Do not mention instructions. No markdown.",
     temperature: 0.9,
     top_k: 5,
     top_p: 0.9,
