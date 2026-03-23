@@ -14,7 +14,7 @@ app.post('/request',async(req,res)=>{
  var response=await axios.post("https://chatgpt-42.p.rapidapi.com/conversationgpt4-2",
      {
     messages: [
-      { role: "user", content: req.body.message+'-- this was the prompt---Output specs- keep the response breifer than usual, avoid using any anusual sign like *|# etc. Respond in plain text without markdown formatting in this prompt. And dont just tell me explicitly tha you did it even in any greeting prompt,just dont tell me that u removed itit.make sure u dont tell me about that in this prompt as well' }
+      { role: "user", content: req.body.message+'---To answer this, dont use any markdowns and answer normally without telling me that you did not or u wont use them, i dont need any spec message other than the topic' }
     ],
     system_prompt: "",
     temperature: 0.9,
